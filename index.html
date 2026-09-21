@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Validation</title>
+</head>
+<body>
+
+    <h1>Input Validation Demo</h1>
+
+    <input type="text" id="username" placeholder="Enter username">
+    <button onclick="validateInput()">Submit</button>
+
+    <p id="message"></p>
+
+    <script>
+        function validateInput() {
+            let username = document.getElementById("username").value;
+            let message = document.getElementById("message");
+
+            if (username.trim() === "") {
+                message.innerHTML = "Please enter your username.";
+            } else {
+                message.innerHTML = "Input is valid.";
+            }
+        }
+    </script>
+
+</body>
+</html>
