@@ -17,11 +17,13 @@
             let username = document.getElementById("username").value;
             let message = document.getElementById("message");
 
-            if (username.trim() === "") {
-                message.innerHTML = "Please enter your username.";
-            } else {
-                message.innerHTML = "Input is valid.";
-            }
+           if (username.trim() === "") {
+                 message.innerHTML = "Please enter your username.";
+            } else if (username.trim().length < 3) {
+               message.innerHTML = "Username must contain at least 3 characters.";
+           } else {
+               message.innerHTML = "Input is valid.";
+           }
         }
     </script>
 
